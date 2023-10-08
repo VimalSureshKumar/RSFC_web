@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RSFC_web.Models.Coach>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Coach_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coach_Phone_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coach_Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coach_Nationality)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coach_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coach_Phone_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coach_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coach_Nationality)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CoachId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CoachId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CoachId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

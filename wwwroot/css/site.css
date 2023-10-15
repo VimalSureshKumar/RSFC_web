@@ -1,22 +1,55 @@
-html {
-  font-size: 14px;
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: rgba(0,0,0, 0.8);
+    margin: 0;
+    padding: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+header 
+{
+    background-color: goldenrod;
+    text-align: center;
+    padding: 15px;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+h1 
+{
+    font-size: 36px; 
+    color: white; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin: 0; 
+    text-align: center;
+    padding: 35px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+nav ul 
+{
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-  margin-bottom: 60px;
+nav li 
+{
+    display: inline;
+    margin-right: 10px;
+    margin: 2.5px;
+}
+
+.content 
+{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: goldenrod;
+}
+
+footer 
+{
+    background-color: goldenrod;
+    text-align: center;
+    padding: 10px;
 }

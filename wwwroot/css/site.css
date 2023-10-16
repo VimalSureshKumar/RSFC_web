@@ -1,4 +1,4 @@
-body 
+.body 
 {
     font-family: Arial, sans-serif;
     background-color: rgba(0,0,0, 0.8);
@@ -6,14 +6,14 @@ body
     padding: 0;
 }
 
-header 
+.header 
 {
     background-color: goldenrod;
     text-align: center;
     padding: 15px;
 }
 
-h1 
+.h1 
 {
     font-size: 36px; 
     color: white; 
@@ -39,7 +39,7 @@ nav li
     margin: 2.5px;
 }
 
-.content 
+.content
 {
     max-width: 800px;
     margin: 20px auto;
@@ -47,9 +47,118 @@ nav li
     background-color: goldenrod;
 }
 
-footer 
+.footer 
 {
     background-color: goldenrod;
     text-align: center;
     padding: 10px;
+}
+
+table 
+{
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table, th, td 
+{
+    border: 1px solid #ddd; 
+}
+
+.player
+{
+    width: 100%;
+}
+
+.index 
+{
+    font-size: 28px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: -55px;
+    text-align: center;
+    padding: 20px;
+}
+
+.create-button
+{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.create-button:hover 
+{
+    background-color: darkgreen;
+    color: white;
+}
+
+.edit-button, .detail-button
+{
+    background-color: dodgerblue; 
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.delete-button 
+{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.edit-button:hover 
+{
+    background-color: darkblue;
+    color: white;
+}
+
+.detail-button:hover 
+{
+    background-color: darkblue;
+    color: white;
+}
+
+.delete-button:hover 
+{
+    background-color: darkred;
+    color: white;
+}
+
+.create-container 
+{
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

@@ -4,16 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h2 class="index">Coaches</h2>
 
 <p>
-    @using (Html.BeginForm("Index","Coach",FormMethod.Get))
-    {
-        <input type="text" name="empsearch" />
-        <input type="submit" value="Search" name="submit" />
-    }
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="create-button">Create New</a>
 </p>
+<body class="body">
 <table class="table">
     <thead>
         <tr>
@@ -48,11 +44,12 @@
                 @Html.DisplayFor(modelItem => item.Coach_Nationality)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CoachId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CoachId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CoachId">Delete</a>
+                <a asp-action="Edit" class="edit-button" asp-route-id="@item.CoachId">Edit</a> |
+                <a asp-action="Details" class="detail-button" asp-route-id="@item.CoachId">Details</a> |
+                <a asp-action="Delete" class="delete-button" asp-route-id="@item.CoachId">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</body>

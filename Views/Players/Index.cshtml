@@ -4,14 +4,15 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h2 class="index">Players</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="create-button">Create New</a>
 </p>
-<table class="table">
+<body class="body"></body>
+<table class="player">
     <thead>
-        <tr>
+        <tr">
             <th>
                 @Html.DisplayNameFor(model => model.Player_Name)
             </th>
@@ -26,15 +27,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Player_Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Coaches)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Positions)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Teams)
             </th>
             <th></th>
         </tr>
@@ -58,18 +50,9 @@
                 @Html.DisplayFor(modelItem => item.Player_Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Coaches.CoachId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Positions.PositionId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Teams.TeamId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PlayerId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PlayerId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PlayerId">Delete</a>
+                    <a asp-action="Edit" class="edit-button" asp-route-id="@item.PlayerId">Edit</a> |
+                    <a asp-action="Details" class="detail-button" asp-route-id="@item.PlayerId">Details</a> |
+                    <a asp-action="Delete" class="delete-button" asp-route-id="@item.PlayerId">Delete</a>
             </td>
         </tr>
 }

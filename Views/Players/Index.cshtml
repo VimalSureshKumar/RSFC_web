@@ -4,15 +4,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h2 class="index">Players</h2>
-
+<h1 class="title">Players</h1>
+<body class="background"></body>
 <p>
     <a asp-action="Create" class="create-button">Create New</a>
 </p>
-<body class="body"></body>
-<table class="player">
+<table class="table">
     <thead>
-        <tr">
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Player_Name)
             </th>
@@ -27,6 +26,15 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Player_Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coaches)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Positions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Teams)
             </th>
             <th></th>
         </tr>
@@ -50,9 +58,18 @@
                 @Html.DisplayFor(modelItem => item.Player_Email)
             </td>
             <td>
-                    <a asp-action="Edit" class="edit-button" asp-route-id="@item.PlayerId">Edit</a> |
-                    <a asp-action="Details" class="detail-button" asp-route-id="@item.PlayerId">Details</a> |
-                    <a asp-action="Delete" class="delete-button" asp-route-id="@item.PlayerId">Delete</a>
+                @Html.DisplayFor(modelItem => item.Coaches.Coach_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Positions.Position_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Teams.Team_Name)
+            </td>
+            <td class="CRUD">
+                <a asp-action="Edit" class="edit-button" asp-route-id="@item.PlayerId">Edit</a> |
+                <a asp-action="Details" class="detail-button" asp-route-id="@item.PlayerId">Details</a> |
+                <a asp-action="Delete" class="delete-button" asp-route-id="@item.PlayerId">Delete</a>
             </td>
         </tr>
 }

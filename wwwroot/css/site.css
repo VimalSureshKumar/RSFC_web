@@ -1,4 +1,4 @@
-.body 
+.background 
 {
     font-family: Arial, sans-serif;
     background-color: rgba(0,0,0, 0.8);
@@ -13,15 +13,15 @@
     padding: 15px;
 }
 
-.h1 
-{
-    font-size: 36px; 
-    color: white; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    margin: 0; 
+.title {
+    font-size: 36px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
     text-align: center;
     padding: 35px;
+    margin-bottom: -45px;
 }
 
 nav ul 
@@ -54,37 +54,18 @@ nav li
     padding: 10px;
 }
 
-table 
-{
+table {
     background-color: white;
-    width: 100%;
+    width: 500%;
     border-collapse: collapse;
     margin: 10px 0;
 }
 
-table, th, td 
-{
-    border: 1px solid #ddd; 
+table, th, td {
+    border: 1px solid #ddd;
 }
 
-.player
-{
-    width: 100%;
-}
-
-.index 
-{
-    font-size: 28px;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: -55px;
-    text-align: center;
-    padding: 20px;
-}
-
-.create-button
-{
+.create-button {
     background-color: green;
     border: none;
     color: white;
@@ -152,13 +133,7 @@ table, th, td
     color: white;
 }
 
-.create-container 
+.carousel-inner
 {
-    max-width: 600px;
-    margin: 0 auto; 
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
 }

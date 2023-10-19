@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RSFC_web.Data;
 
@@ -11,9 +12,11 @@ using RSFC_web.Data;
 namespace RSFC_web.Migrations
 {
     [DbContext(typeof(RSFC_webContext))]
-    partial class RSFC_webContextModelSnapshot : ModelSnapshot
+    [Migration("20231019144607_FirstLastNamesRegis")]
+    partial class FirstLastNamesRegis
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -261,7 +264,7 @@ namespace RSFC_web.Migrations
 
                     b.HasKey("CoachId");
 
-                    b.ToTable("Coach", (string)null);
+                    b.ToTable("Coach");
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Manager", b =>
@@ -292,7 +295,7 @@ namespace RSFC_web.Migrations
 
                     b.HasKey("ManagerId");
 
-                    b.ToTable("Manager", (string)null);
+                    b.ToTable("Manager");
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Player", b =>
@@ -345,7 +348,7 @@ namespace RSFC_web.Migrations
 
                     b.HasIndex("TeamId");
 
-                    b.ToTable("Player", (string)null);
+                    b.ToTable("Player");
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Position", b =>
@@ -363,7 +366,7 @@ namespace RSFC_web.Migrations
 
                     b.HasKey("PositionId");
 
-                    b.ToTable("Position", (string)null);
+                    b.ToTable("Position");
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Team", b =>
@@ -387,7 +390,7 @@ namespace RSFC_web.Migrations
 
                     b.HasIndex("ManagerId");
 
-                    b.ToTable("Team", (string)null);
+                    b.ToTable("Team");
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Transaction", b =>
@@ -412,7 +415,7 @@ namespace RSFC_web.Migrations
 
                     b.HasIndex("PlayerId");
 
-                    b.ToTable("Transaction", (string)null);
+                    b.ToTable("Transaction");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

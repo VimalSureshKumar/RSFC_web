@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using RSFC_web.Models;
 
 namespace RSFC_web.Controllers
 {
+    [Authorize]
     public class PlayersController : Controller
     {
         private readonly RSFC_webContext _context;
@@ -50,9 +52,9 @@ namespace RSFC_web.Controllers
         // GET: Players/Create
         public IActionResult Create()
         {
-            ViewData["CoachId"] = new SelectList(_context.Coach, "CoachId", "CoachId");
-            ViewData["PositionId"] = new SelectList(_context.Set<Position>(), "PositionId", "PositionId");
-            ViewData["TeamId"] = new SelectList(_context.Set<Team>(), "TeamId", "TeamId");
+            ViewData["CoachId"] = new SelectList(_context.Coach, "CoachId", "Coach_Email");
+            ViewData["PositionId"] = new SelectList(_context.Position, "PositionId", "Position_Name");
+            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "Team_Name");
             return View();
         }
 
@@ -69,9 +71,9 @@ namespace RSFC_web.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CoachId"] = new SelectList(_context.Coach, "CoachId", "CoachId", player.CoachId);
-            ViewData["PositionId"] = new SelectList(_context.Set<Position>(), "PositionId", "PositionId", player.PositionId);
-            ViewData["TeamId"] = new SelectList(_context.Set<Team>(), "TeamId", "TeamId", player.TeamId);
+            ViewData["CoachId"] = new SelectList(_context.Coach, "CoachId", "Coach_Email", player.CoachId);
+            ViewData["PositionId"] = new SelectList(_context.Position, "PositionId", "Position_Name", player.PositionId);
+            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "Team_Name", player.TeamId);
             return View(player);
         }
 
@@ -88,9 +90,9 @@ namespace RSFC_web.Controllers
             {
                 return NotFound();
             }
-            ViewData["CoachId"] = new SelectList(_context.Coach, "CoachId", "CoachId", player.CoachId);
-            ViewData["PositionId"] = new SelectList(_context.Set<Position>(), "PositionId", "PositionId", player.PositionId);
-            ViewData["TeamId"] = new SelectList(_context.Set<Team>(), "TeamId", "TeamId", player.TeamId);
+            ViewData["CoachId"] = new SelectList(_context.Coach, "CoachId", "Coach_Email", player.CoachId);
+            ViewData["PositionId"] = new SelectList(_context.Position, "PositionId", "Position_Name", player.PositionId);
+            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "Team_Name", player.TeamId);
             return View(player);
         }
 
@@ -126,9 +128,9 @@ namespace RSFC_web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CoachId"] = new SelectList(_context.Coach, "CoachId", "CoachId", player.CoachId);
-            ViewData["PositionId"] = new SelectList(_context.Set<Position>(), "PositionId", "PositionId", player.PositionId);
-            ViewData["TeamId"] = new SelectList(_context.Set<Team>(), "TeamId", "TeamId", player.TeamId);
+            ViewData["CoachId"] = new SelectList(_context.Coach, "CoachId", "Coach_Email", player.CoachId);
+            ViewData["PositionId"] = new SelectList(_context.Position, "PositionId", "Position_Name", player.PositionId);
+            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "Team_Name", player.TeamId);
             return View(player);
         }
 

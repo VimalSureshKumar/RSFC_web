@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using RSFC_web.Models;
 
 namespace RSFC_web.Controllers
 {
+    [Authorize]
     public class CoachesController : Controller
     {
         private readonly RSFC_webContext _context;

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Authorization;
+using System.ComponentModel.DataAnnotations;
 
 namespace RSFC_web.Models
 {
@@ -19,9 +20,9 @@ namespace RSFC_web.Models
         public string? Player_Gender { get; set; }
 
         [DataType(DataType.Date)]
-        [Required(ErrorMessage = "Please enter Date of Birth")]
+        [Required(ErrorMessage = "Please Enter valid Date of Birth")]
         [Display(Name = "Date of Birth")]
-        public DateTime Player_Dob { get; set; }
+        public DateTime? Player_Dob { get; set; }
 
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Please enter Mobile Number")]
@@ -35,22 +36,22 @@ namespace RSFC_web.Models
         public string? Player_Email { get; set; }
 
         [Required]
-        [Display(Name = "Coach ID")]
-        public int CoachId { get; set; }
+        [Display(Name = "Coach")]
+        public int? CoachId { get; set; }
 
         [Required]
-        [Display(Name = "Team ID")]
-        public int TeamId { get; set; }
+        [Display(Name = "Team")]
+        public int? TeamId { get; set; }
 
         [Required]
-        [Display(Name = "Position ID")]
-        public int PositionId { get; set; }
+        [Display(Name = "Position")]
+        public int? PositionId { get; set; }
 
-        public virtual Coach Coaches { get; set; } = null!;
+        public virtual Coach? Coaches { get; set; } = null!;
 
-        public virtual Position Positions { get; set; } = null!;
+        public virtual Position? Positions { get; set; } = null!;
 
-        public virtual Team Teams { get; set; } = null!;
+        public virtual Team? Teams { get; set; } = null!;
 
         public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
     }

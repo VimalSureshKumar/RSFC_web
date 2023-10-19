@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using RSFC_web.Areas.Identity.Data;
 using RSFC_web.Models;
 
 namespace RSFC_web.Data;
-
+[Authorize]
 public class RSFC_webContext : IdentityDbContext<AppUser>
 {
     public RSFC_webContext(DbContextOptions<RSFC_webContext> options)

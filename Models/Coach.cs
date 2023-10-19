@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Authorization;
+using System.ComponentModel.DataAnnotations;
 
 namespace RSFC_web.Models
 {
@@ -14,7 +15,7 @@ namespace RSFC_web.Models
         public string Coach_Name { get; set; } = null!;
 
         [DataType(DataType.PhoneNumber)]
-        [Required(ErrorMessage = "Please enter Mobile Number")]
+        [Required(ErrorMessage = "Please enter Mobile Number"), MaxLength(50)]
         [Display(Name = "Phone Number")]
         public string Coach_Phone_Number { get; set; } = null!;
 

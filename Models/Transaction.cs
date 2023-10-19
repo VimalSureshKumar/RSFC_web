@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Authorization;
+using System.ComponentModel.DataAnnotations;
 
 namespace RSFC_web.Models
 {
@@ -19,7 +20,7 @@ namespace RSFC_web.Models
         public DateTime Transaction_Date { get; set; }
 
         [Required]
-        [Display(Name = "Player ID")]
+        [Display(Name = "Player")]
         public int? PlayerId { get; set; }
 
         public virtual Player? Players { get; set; }

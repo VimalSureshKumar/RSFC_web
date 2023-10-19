@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using RSFC_web.Models;
 
 namespace RSFC_web.Controllers
 {
+    [Authorize]
     public class TransactionsController : Controller
     {
         private readonly RSFC_webContext _context;
@@ -48,7 +50,7 @@ namespace RSFC_web.Controllers
         // GET: Transactions/Create
         public IActionResult Create()
         {
-            ViewData["PlayerId"] = new SelectList(_context.Player, "PlayerId", "PlayerId");
+            ViewData["PlayerId"] = new SelectList(_context.Player, "PlayerId", "Player_Email");
             return View();
         }
 
@@ -65,7 +67,7 @@ namespace RSFC_web.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PlayerId"] = new SelectList(_context.Player, "PlayerId", "PlayerId", transaction.PlayerId);
+            ViewData["PlayerId"] = new SelectList(_context.Player, "PlayerId", "Player_Email", transaction.PlayerId);
             return View(transaction);
         }
 
@@ -82,7 +84,7 @@ namespace RSFC_web.Controllers
             {
                 return NotFound();
             }
-            ViewData["PlayerId"] = new SelectList(_context.Player, "PlayerId", "PlayerId", transaction.PlayerId);
+            ViewData["PlayerId"] = new SelectList(_context.Player, "PlayerId", "Player_Email", transaction.PlayerId);
             return View(transaction);
         }
 
@@ -118,7 +120,7 @@ namespace RSFC_web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PlayerId"] = new SelectList(_context.Player, "PlayerId", "PlayerId", transaction.PlayerId);
+            ViewData["PlayerId"] = new SelectList(_context.Player, "PlayerId", "Player_Email", transaction.PlayerId);
             return View(transaction);
         }
 

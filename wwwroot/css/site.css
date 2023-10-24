@@ -1,13 +1,11 @@
-.background 
-{
+.background {
     font-family: Arial, sans-serif;
     background-color: rgba(0,0,0, 0.8);
     margin: 0;
     padding: 0;
 }
 
-.header 
-{
+.header {
     background-color: goldenrod;
     text-align: center;
     padding: 15px;
@@ -24,31 +22,20 @@
     margin-bottom: -45px;
 }
 
-nav ul 
-{
+nav ul {
     background-color: white;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav li 
-{
+nav li {
     display: inline;
     margin-right: 10px;
     margin: 2.5px;
 }
 
-.content
-{
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: goldenrod;
-}
-
-.footer 
-{
+.footer {
     background-color: goldenrod;
     text-align: center;
     padding: 10px;
@@ -56,9 +43,13 @@ nav li
 
 table {
     background-color: white;
-    width: 500%;
     border-collapse: collapse;
     margin: 10px 0;
+}
+
+.table {
+    width: 1500px;
+    margin-left: -100px;
 }
 
 table, th, td {
@@ -77,17 +68,16 @@ table, th, td {
     margin-top: 5px;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: -100px;
 }
 
-.create-button:hover 
-{
+.create-button:hover {
     background-color: darkgreen;
     color: white;
 }
 
-.edit-button, .detail-button
-{
-    background-color: dodgerblue; 
+.edit-button, .detail-button {
+    background-color: dodgerblue;
     border: none;
     color: white;
     padding: 8px 12px;
@@ -100,8 +90,7 @@ table, th, td {
     border-radius: 3px;
 }
 
-.delete-button 
-{
+.delete-button {
     background-color: red;
     border: none;
     color: white;
@@ -115,25 +104,21 @@ table, th, td {
     border-radius: 3px;
 }
 
-.edit-button:hover 
-{
+.edit-button:hover {
     background-color: darkblue;
     color: white;
 }
 
-.detail-button:hover 
-{
+.detail-button:hover {
     background-color: darkblue;
     color: white;
 }
 
-.delete-button:hover 
-{
+.delete-button:hover {
     background-color: darkred;
     color: white;
 }
 
-.carousel-inner
-{
+.carousel-inner {
     margin-top: 60px;
 }

@@ -6,30 +6,30 @@ namespace RSFC_web.Models
     // Define a C# class named "Transaction"
     public partial class Transaction
     {
-        // Define a required integer property for the transaction's ID with a display name.
+        // This property represents the Transaction's unique identifier.
         [Required]
         [Display(Name = "Transaction ID")]
         public int TransactionId { get; set; }
 
-        // Define a decimal property for the transaction's fee with data type and validation rules.
-        [DataType(DataType.Currency)]
+        // This property represents the Transaction's fee.
+        [DataType(DataType.Currency)] // Specifies that it contains currency data.
         [Required(ErrorMessage = "Please enter Transaction Amount")]
-        [RegularExpression(@"^\$?\d+(\.\d{2})?$", ErrorMessage = "Please enter a valid amount.")]
+        [RegularExpression(@"^\$?\d+(\.\d{2})?$", ErrorMessage = "Please enter a valid amount.")] // Validates that the fee follows the specific format and provides a error message if not.
         [Display(Name = "Transaction Fee")]
         public decimal Transaction_Fee { get; set; }
 
-        // Define a property for the transaction's date with data type and required validation.
+        // This property represents the Transaction's date.
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Please enter Transaction Date")]
         [Display(Name = "Transaction Date")]
         public DateTime Transaction_Date { get; set; }
 
-        // Define a required integer property for the associated player with a display name. It allows null values.
+        // This property represents the associated Player.
         [Required]
         [Display(Name = "Player")]
         public int? PlayerId { get; set; }
 
-        // Define a virtual navigation property for the associated player entity. It allows null values.
+        // This property represents a virtual navigation property for the associated Player entity.
         public virtual Player? Players { get; set; }
     }
 }

@@ -261,7 +261,7 @@ namespace RSFC_web.Migrations
 
                     b.HasKey("CoachId");
 
-                    b.ToTable("Coach");
+                    b.ToTable("Coach", (string)null);
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Manager", b =>
@@ -293,7 +293,7 @@ namespace RSFC_web.Migrations
 
                     b.HasKey("ManagerId");
 
-                    b.ToTable("Manager");
+                    b.ToTable("Manager", (string)null);
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Player", b =>
@@ -345,7 +345,7 @@ namespace RSFC_web.Migrations
 
                     b.HasIndex("TeamId");
 
-                    b.ToTable("Player");
+                    b.ToTable("Player", (string)null);
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Position", b =>
@@ -363,7 +363,7 @@ namespace RSFC_web.Migrations
 
                     b.HasKey("PositionId");
 
-                    b.ToTable("Position");
+                    b.ToTable("Position", (string)null);
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Team", b =>
@@ -387,7 +387,7 @@ namespace RSFC_web.Migrations
 
                     b.HasIndex("ManagerId");
 
-                    b.ToTable("Team");
+                    b.ToTable("Team", (string)null);
                 });
 
             modelBuilder.Entity("RSFC_web.Models.Transaction", b =>
@@ -412,7 +412,7 @@ namespace RSFC_web.Migrations
 
                     b.HasIndex("PlayerId");
 
-                    b.ToTable("Transaction");
+                    b.ToTable("Transaction", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

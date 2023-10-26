@@ -74,11 +74,15 @@ namespace RSFC_web.Areas.Identity.Pages.Account
         {
             [Required]
             [StringLength(50, ErrorMessage = "The first name field should have a maximun of 50 characters")]
+            [DataType(DataType.Text)]
+            [RegularExpression(@"^[A-Z][a-zA-Z]*(\s[A-Z][a-zA-Z]*){1,2}$", ErrorMessage = "Please enter a valid First Name starting with capital letters.")]
             [Display(Name = "First Name")]
             public string FirstName { get; set; } = null!;
 
             [Required]
             [StringLength(50, ErrorMessage = "The last name field should have a maximun of 50 characters")]
+            [DataType(DataType.Text)]
+            [RegularExpression(@"^[A-Z][a-zA-Z]*(\s[A-Z][a-zA-Z]*){1,2}$", ErrorMessage = "Please enter a valid Last Name starting with capital letters.")]
             [Display(Name = "Last Name")]
             public string LastName { get; set; } = null!;
             /// <summary>

@@ -13,8 +13,7 @@ namespace RSFC_web.Models
 
         // This property represents the Team's name.
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "Please enter valid Team"), MaxLength(30)] // Limits the team to a maximum of 30 characters.
-        [RegularExpression(@"^[A-Z][a-zA-Z]*(\s[A-Z][a-zA-Z]*){1,2}$", ErrorMessage = "Please enter a valid team name starting with capital letters.")]
+        [Required(ErrorMessage = "Please enter valid Team"), StringLength(30)] // Limits the team to a maximum of 30 characters.
         [Display(Name = "Team")]
         public string Team_Name { get; set; } = null!;
 

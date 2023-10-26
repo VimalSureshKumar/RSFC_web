@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RSFC_web.Data;
 
@@ -11,9 +12,11 @@ using RSFC_web.Data;
 namespace RSFC_web.Migrations
 {
     [DbContext(typeof(RSFC_webContext))]
-    partial class RSFC_webContextModelSnapshot : ModelSnapshot
+    [Migration("20231026064631_Outstandingcode")]
+    partial class Outstandingcode
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -5,11 +5,21 @@
     padding: 0;
 }
 
+/* The '.background' class is used to define styles for the background of the web page.
+   - It sets the font family to Arial and sans-serif as a fallback.
+   - It gives the background a semi-transparent black color with an alpha (opacity) value of 0.8.
+   - It removes margin and padding from the entire page. */
+
 .header {
     background-color: goldenrod;
     text-align: center;
     padding: 15px;
 }
+
+/* The '.header' class is for styling a header section.
+   - It sets the background color to 'goldenrod'.
+   - It centers the text within the header.
+   - It adds 15px of padding around the header. */
 
 .title {
     font-size: 36px;
@@ -22,6 +32,14 @@
     margin-bottom: -45px;
 }
 
+/* The '.title' class is for styling the title text within the header.
+   - It sets the font size to 36px.
+   - It makes the text white in color.
+   - It transforms the text to uppercase.
+   - It adds letter spacing of 2px.
+   - It removes the top margin, centers the text, and adds 35px of padding.
+   - It adjusts the margin at the bottom to create a specific layout. */
+
 nav ul {
     background-color: white;
     list-style-type: none;
@@ -29,11 +47,21 @@ nav ul {
     padding: 0;
 }
 
+/* The 'nav ul' class is used to style an unordered list within the navigation area.
+   - It sets the background color to white.
+   - It removes the list-style bullets.
+   - It removes margin and padding from the list. */
+
 nav li {
     display: inline;
     margin-right: 10px;
     margin: 2.5px;
 }
+
+/* The 'nav li' class styles list items within the navigation area.
+   - It makes the list items display inline (horizontally).
+   - It adds 10px of right margin between list items.
+   - It adds 2.5px of margin to the top and bottom of each list item. */
 
 .footer {
     background-color: goldenrod;
@@ -41,20 +69,39 @@ nav li {
     padding: 10px;
 }
 
+/* The '.footer' class is for styling a footer section.
+   - It sets the background color to 'goldenrod'.
+   - It centers the text within the footer.
+   - It adds 10px of padding around the footer. */
+
 table {
     background-color: white;
     border-collapse: collapse;
     margin: 10px 0;
 }
 
+/* The 'table' class is used to style tables.
+   - It sets the background color to white.
+   - It collapses the table borders.
+   - It adds a 10px margin to the top and bottom of the table. */
+
 .table {
     width: 1500px;
     margin-left: -100px;
 }
 
+/* The '.table' class is used to style a specific table.
+   - It sets the table width to 1500px.
+   - It shifts the table to the left by 100px (negative margin). */
+
 table, th, td {
     border: 1px solid #ddd;
 }
+
+/* The '.table' class is used to style a specific table.
+   - It sets the table with a border of 1px that is black. */
+
+/* The following styles are used for buttons with various classes and their hover effects. They control the appearance and behavior of buttons. */
 
 .create-button {
     background-color: green;
@@ -122,3 +169,5 @@ table, th, td {
 .carousel-inner {
     margin-top: 60px;
 }
+
+/* The '.carousel-inner' class sets a margin at the top of 60px. */
